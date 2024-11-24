@@ -1,0 +1,80 @@
+@font-face {
+    font-family: TitleFont;
+    src: url(assets/fonts/PoetsenOne-Regular.ttf);
+  }
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    background-image: url('assets/images/placeholder.png'); /* Default background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}
+
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index:-100;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Home thing */
+.headerbox{
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5%;
+    margin: auto;
+    opacity: 85%;
+}
+
+.centrebigtitle{
+    position: fixed;
+    font-family: TitleFont;
+    font-size: 500%;
+    color: #ffffff;
+    top: 36.25%;
+    left: 1.25%;
+    /*transform: translate(-50%, -50%);*/
+    width: 100%;
+}
+
+.footerbox{
+    position: fixed;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5%;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 85%;
+}
