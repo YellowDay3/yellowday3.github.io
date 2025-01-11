@@ -2,72 +2,132 @@
     font-family: TitleFont;
     src: url(assets/fonts/PoetsenOne-Regular.ttf);
   }
-
-
-body, html {
+  
+  body, html {
     margin: 0;
     padding: 0;
     overflow: hidden;
     height: 100%;
-}
-
-body {
-    background-image: url('assets/images/placeholder.png'); /* Default background */
+    text-align: center;
+  }
+  
+  body {
+    background-image: url('assets/images/main.png'); /* Default background */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-
-canvas {
+  
+  canvas {
     display: block;
     width: 100%;
     height: 100%;
     z-index: -100;
-}
-
-
-video {
+  }
+  
+  video {
     position: absolute;
     top: 0;
     left: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index:-100;
-}
+    z-index: -100;
+  }
 
-
-
-
-
-
-
-
-
-
-
-/* Home thing */
-.headerbox{
+  /*--------------------Functions----------------------*/
+    .hidden{
+      opacity: 0%;
+    }
+  /*---------------------------------------------------*/
+  /*--------------------Home thing---------------------*/
+  .headerbox {
+    position: absolute;
     background-color: #ffffff;
     color: #ffffff;
     padding: 5%;
     margin: auto;
-    opacity: 85%;
-}
-
-.centrebigtitle{
-    position: fixed;
-    font-family: TitleFont;
-    font-size: 500%;
-    color: #ffffff;
-    top: 36.25%;
-    left: 1.25%;
-    /*transform: translate(-50%, -50%);*/
+    top: 0%;
+    left: 0;
     width: 100%;
-}
+    text-align: center;
+  
+  }
+  
+  .centrebigtitle {
+    position: absolute;
+    font-family: TitleFont;
+    color: #ffffff;
+    font-size: 650%;
+    top: 27%;
+    left: 22%;
+    
+  }
+  
+  .centrebigtitle2 {
+    position: absolute;
+    font-family: TitleFont;
+    font-size: 650%;
+    color: #ffffff;
+    top: 40%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    
+  }
 
-.footerbox{
-    position: fixed;
+  .centrebigtitle3 {
+    position: absolute;
+    font-family: TitleFont;
+    font-size: 550%;
+    color: #ffffff;
+    top: 48%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    
+  }
+  
+  .briefsum {
+    position: absolute;
+    font-family: TitleFont;
+    font-size: 250%;
+    color: #ffffff;
+    top: 60%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    
+  }
+
+  .bookaroom{
+    position: absolute;
+    font-family: TitleFont;
+    font-size: 250%;
+    top: 72%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background-color: #ffffff00;
+    border: 8px solid white;
+    border-collapse: collapse;
+    
+  }
+
+  .bookaroom:hover {
+    transition: 350ms background ease-out, 350ms color ease-out;
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .bookaroom:not(hover) {
+    transition: 350ms background ease-out, 350ms color ease-out;
+    background-color: #ffffff00;
+    color: #ffffff;
+  }
+
+  .footerbox {
+    position: absolute;
     background-color: #ffffff;
     color: #ffffff;
     padding: 5%;
@@ -76,5 +136,56 @@ video {
     left: 0;
     width: 100%;
     text-align: center;
-    opacity: 85%;
-}
+    
+  }
+  /*----------------------------------------------------*/
+
+    /*---------------------Home out-----------------*/
+    .headerbox.moved{
+      transition: 1000ms 500ms all ease-in;
+      top: -100%;
+    }
+    .footerbox.moved{
+      transition: 1000ms 500ms all ease-in;
+      bottom: 100%;
+    }
+    .centrebigtitle.moved{
+      transition: 1000ms 500ms all ease-in;
+      top: -73%;
+    }
+    .centrebigtitle2.moved{
+      transition: 1000ms 500ms all ease-in;
+      top: -60%;
+    }
+    .centrebigtitle3.moved{
+      transition: 1000ms 500ms all ease-in;
+      top: -52%;
+      
+    }
+    .briefsum.moved{
+      transition: 1000ms 500ms all ease-in;
+      top: -40%;
+    }
+    .bookaroom.moved{
+      transition: 1000ms 500ms all ease-in;
+      top: -28%;
+    }
+    /*---------------------------------------------------*/
+
+  /*-------------------Register Page--------------------*/
+    .limg{
+      position: absolute;
+      z-index: 3;
+      float: right;
+      right: 0;
+    }
+
+    .registerbox {
+      position: absolute;
+      background-color: #ffffff;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+  /*----------------------------------------------------*/

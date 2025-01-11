@@ -1,23 +1,53 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = 1;
 
-function showPage(shown, hidden) {
-    document.getElementById(shown).style.display='block';
-    document.getElementById(hidden).style.display='none';
-    return false;
-}
-
-window.onload = function() {
-    const page1 = document.getElementById("PageHome");
-    const page2 = document.getElementById("PageResevation");
-  
-    // Check if the Page1 div is hidden
-    if (!(window.getComputedStyle(page1).display === "none")) {
-    // Ensure the default background is applied
-      document.body.classList.remove('blank-bg');
-      document.body.classList.add('page1-bg');
-    } else {
-      // Change the background to a blank color
-      document.body.classList.remove('page1-bg');
-      document.body.classList.add('blank-bg');
+    //Customer Info
+    const customer = {
+        name : "",
+        lastname : "",
+        cin : "",
+        email : "",
+        phonenumber : "",
+        cottage : "",
+        typecottage : "",
+        enterdate : "",
+        exitdate : ""
     }
-  };
-  
+
+    //Page 1 
+    const hd = document.getElementById('hd');
+    const fb = document.getElementById('fb');
+    const cbt1 = document.getElementById('cbt1');
+    const cbt2 = document.getElementById('cbt2');
+    const cbt3 = document.getElementById('cbt3');
+    const para = document.getElementById('para');
+    const btn = document.getElementById('topage2');
+
+    function hideCurrentPage(hide) {
+        if (currentPage === 1) {
+            [hd, fb, cbt1, cbt2, cbt3, para, btn].forEach((el, idx) => {
+                if (!el) console.error(`Element with id not found for index ${idx}`);
+                else {
+                    if (hide) el.classList.add('hidden');
+                    else el.classList.remove('hidden');
+                }
+            });
+        }
+    }
+
+    function nextPage() {
+        if (currentPage === 1) {
+            [hd, fb, cbt1, cbt2, cbt3, para, btn].forEach((el, idx) => {
+                if (!el) console.error(`Element with id not found for index ${idx}`);
+                else el.classList.add('moved');
+            });
+            currentPage++;
+        }
+    }
+
+    document.getElementById('topage2').addEventListener('click', () => {
+        nextPage();
+    });
+
+    hideCurrentPage(1);
+});
